@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/tvlafiesta"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_margin="40dp"
+            android:text="LA FIESTA" />
+
+        <LinearLayout
+            android:layout_width="370dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/rbvip"
+                    android:layout_width="match_parent"
+                    android:textSize="25dp"
+                    android:layout_height="wrap_content"
+                    android:text="VIP                $500.000" />
+
+                <RadioButton
+                    android:id="@+id/rbpalco"
+                    android:checked="true"
+                    android:layout_width="match_parent"
+                    android:textSize="25dp"
+                    android:layout_height="wrap_content"
+                    android:text="PALCO           $350.000" />
+
+                <RadioButton
+                    android:id="@+id/rblateral"
+                    android:layout_width="match_parent"
+                    android:textSize="25dp"
+                    android:layout_height="wrap_content"
+                    android:text="LATERALES  $250.000" />
+
+                <RadioButton
+                    android:id="@+id/rbgeneral"
+                    android:layout_width="match_parent"
+                    android:textSize="25dp"
+                    android:layout_height="wrap_content"
+                    android:text="GENERAL       $25.000" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etcantidad"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:hint="digite cantidad de personas"
+            android:ems="10"
+            android:inputType="number" />
+
+        <LinearLayout
+            android:layout_width="370dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/rbaguardiente"
+                    android:textSize="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AGUARDIENTE    $150000" />
+
+                <RadioButton
+                    android:id="@+id/rbron"
+                    android:textSize="25dp"
+                    android:checked="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RON                      $180.000" />
+
+                <RadioButton
+                    android:id="@+id/rbwhisky"
+                    android:textSize="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="WHISKY                $250.000" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etbotellas"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Digite cantidad de botellas"
+            android:inputType="number"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:layout_width="370dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/cbpropina"
+                android:layout_width="match_parent"
+                android:textSize="20dp"
+                android:layout_height="match_parent"
+                android:text="PROPINA VOLUNTARIA DEL 10%" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/btcalcular"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:onClick="Calcular"
+            android:text="CALCULAR"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/btlimpiar"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:onClick="Limpiar"
+            android:text="LIMPIAR"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvtotal"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:hint="TOTAL A PAGAR"
+        android:text="0"
+        android:textSize="30dp" />
+</LinearLayout>
